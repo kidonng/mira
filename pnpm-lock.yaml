@@ -3,6 +3,7 @@ dependencies:
   ky: 0.27.0
 devDependencies:
   vuepress: 1.8.2
+  vuepress-theme-succinct: 1.7.2
 lockfileVersion: 5.2
 packages:
   /@babel/code-frame/7.12.13:
@@ -7957,12 +7958,32 @@ packages:
     dev: true
     resolution:
       integrity: sha512-TQrDX/v+WHOihj3jpilVnjXu9RcTm6m8tzljNJwYhxnJUW0WWQ0hFLcDTqTBwgKIFdEiSxVOmYE+bJX/sq46MA==
+  /vuepress-plugin-smooth-scroll/0.0.10:
+    dependencies:
+      smoothscroll-polyfill: 0.4.4
+    dev: true
+    resolution:
+      integrity: sha512-1B7cc0OxROX9aPdktTF6lGqASGh3h0mtiUCmbAVZfGDtTOGUYDDA1BhLV96zkz/v1Zh/UvKP2gF6ADrcV83BMg==
   /vuepress-plugin-smooth-scroll/0.0.3:
     dependencies:
       smoothscroll-polyfill: 0.4.4
     dev: true
     resolution:
       integrity: sha512-qsQkDftLVFLe8BiviIHaLV0Ea38YLZKKonDGsNQy1IE0wllFpFIEldWD8frWZtDFdx6b/O3KDMgVQ0qp5NjJCg==
+  /vuepress-theme-succinct/1.7.2:
+    dependencies:
+      '@vuepress/plugin-active-header-links': 1.8.2
+      '@vuepress/plugin-nprogress': 1.8.2
+      '@vuepress/plugin-search': 1.8.2
+      docsearch.js: 2.6.3
+      lodash: 4.17.21
+      stylus: 0.54.8
+      stylus-loader: 3.0.2_stylus@0.54.8
+      vuepress-plugin-container: 2.1.5
+      vuepress-plugin-smooth-scroll: 0.0.10
+    dev: true
+    resolution:
+      integrity: sha512-/cWHWWSRR41Nb+c6QpqGQ23lXoHFONPhxEfyAxN/SQq9QdyqvXuVhxB3gpmg4baTlMn0PoyyPtP6HeCS3a9Y8A==
   /vuepress/1.8.2:
     dependencies:
       '@vuepress/core': 1.8.2
@@ -8287,3 +8308,4 @@ specifiers:
   diff: ^5.0.0
   ky: ^0.27.0
   vuepress: ^1.8.2
+  vuepress-theme-succinct: ^1.7.2
