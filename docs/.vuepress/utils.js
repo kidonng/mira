@@ -49,7 +49,7 @@ export function fastgit(raw) {
 export const magisk = (raw) =>
   raw.replace(
     'topjohnwu.github.io/Magisk',
-    'github.com/topjohnwu/Magisk/blob/master/docs'
+    'github.com/topjohnwu/Magisk/raw/master/docs'
   )
 
 export function jsdelivr(raw) {

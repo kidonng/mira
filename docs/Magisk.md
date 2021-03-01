@@ -44,7 +44,9 @@ export default {
        <option value="canary">Canary</option>
      </select>
    </label>
-3. 在 Magisk 应用的**更新通道**选项中选择 **Custom Channel** 并填入以下地址（点击复制）：
+3. 打开 Magisk 设置
+4. 在**更新通道**中选择 **Custom Channel**
+5. 在**自定义通道**中填入以下地址（点击复制）：
 
    <span>
      <code @click="copy">{{ url }}</code>

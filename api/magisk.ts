@@ -4,25 +4,25 @@ import { fastgit, magisk } from '../docs/.vuepress/utils'
 
 interface Manifest {
   app: App
-  magisk: App
+  magisk: Magisk
   uninstaller: Uninstaller
   stub: Stub
 }
 
-interface App {
+interface App extends Stub {
   version: string
-  versionCode: string
-  link: string
   note: string
-  md5?: string
 }
 
-export interface Stub {
+interface Magisk extends App {
+  md5: string
+}
+
+interface Stub extends Uninstaller {
   versionCode: string
-  link: string
 }
 
-export interface Uninstaller {
+interface Uninstaller {
   link: string
 }
 
