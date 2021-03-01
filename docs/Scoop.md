@@ -3,7 +3,7 @@
 <script>
 export default {
   data: () => ({
-    source: 'https://github.com/ScoopInstaller/Install/blob/master/install.ps1',
+    source: 'https://github.com/ScoopInstaller/Install/raw/master/install.ps1',
     filename: 'scoop-install.ps1',
   })
 }

@@ -3,7 +3,7 @@
 <script>
 export default {
   data: () => ({
-    source: 'https://github.com/Homebrew/install/blob/master/install.sh',
+    source: 'https://github.com/Homebrew/install/raw/master/install.sh',
     filename: 'homebrew-install.sh',
   })
 }

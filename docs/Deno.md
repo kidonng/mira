@@ -4,11 +4,11 @@
 export default {
   data: () => ({
     shell: {
-      source: 'https://github.com/denoland/deno_install/blob/master/install.sh',
+      source: 'https://github.com/denoland/deno_install/raw/master/install.sh',
       filename: 'deno-install.sh',
     },
     ps: {
-      source: 'https://github.com/denoland/deno_install/blob/master/install.ps1',
+      source: 'https://github.com/denoland/deno_install/raw/master/install.ps1',
       filename: 'deno-install.ps1',
     },
   })
