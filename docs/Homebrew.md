@@ -3,7 +3,7 @@
 <script>
 export default {
   data: () => ({
-    sourceURL: 'https://github.com/Homebrew/install/blob/master/install.sh',
+    source: 'https://github.com/Homebrew/install/blob/master/install.sh',
     filename: 'homebrew-install.sh',
   })
 }
@@ -17,7 +17,7 @@ export default {
 
 ## [USTC](https://mirrors.ustc.edu.cn/help/brew.git.html)
 
-<Patch :sourceURL="sourceURL" :filename="filename">
+<Patch :source="source" :filename="filename">
 
 ```diff
 --- install.sh	2021-02-27 00:55:01.000000000 +0800
@@ -55,7 +55,7 @@ export default {
 
 ## [TUNA](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
 
-<Patch :sourceURL="sourceURL" :filename="filename">
+<Patch :source="source" :filename="filename">
 
 ```diff
 --- install.sh	2021-02-27 03:28:55.000000000 +0800

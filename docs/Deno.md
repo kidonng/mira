@@ -3,10 +3,14 @@
 <script>
 export default {
   data: () => ({
-    shellSourceURL: 'https://github.com/denoland/deno_install/blob/master/install.sh',
-    shellFilename: 'deno-install.sh',
-    psSourceURL: 'https://github.com/denoland/deno_install/blob/master/install.ps1',
-    psFilename: 'deno-install.ps1',
+    shell: {
+      source: 'https://github.com/denoland/deno_install/blob/master/install.sh',
+      filename: 'deno-install.sh',
+    },
+    ps: {
+      source: 'https://github.com/denoland/deno_install/blob/master/install.ps1',
+      filename: 'deno-install.ps1',
+    },
   })
 }
 </script>
@@ -22,7 +26,7 @@ export default {
 
 ### PowerShell
 
-<Patch :sourceURL="psSourceURL" :filename="psFilename">
+<Patch :source="ps.source" :filename="ps.filename">
 
 ```diff
 --- install.ps1	2021-03-01 17:40:56.000000000 +0800
@@ -45,7 +49,7 @@ export default {
 
 ### Shell
 
-<Patch :sourceURL="shellSourceURL" :filename="shellFilename">
+<Patch :source="shell.source" :filename="shell.filename">
 
 ```diff
 --- install.sh	2021-03-01 17:06:00.000000000 +0800

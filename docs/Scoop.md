@@ -3,7 +3,7 @@
 <script>
 export default {
   data: () => ({
-    sourceURL: 'https://github.com/ScoopInstaller/Install/blob/master/install.ps1',
+    source: 'https://github.com/ScoopInstaller/Install/blob/master/install.ps1',
     filename: 'scoop-install.ps1',
   })
 }
@@ -17,7 +17,7 @@ export default {
 
 ## [FastGit](https://fastgit.org/)
 
-<Patch :sourceURL="sourceURL" :filename="filename">
+<Patch :source="source" :filename="filename">
 
 ```diff
 --- install.ps1	2021-02-26 23:21:59.000000000 +0800

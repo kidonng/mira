@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>
-      <button @click="patch">使用此补丁</button>
+      <button @click="usePatch">使用此补丁</button>
     </p>
     <slot />
   </div>
@@ -14,17 +14,19 @@ import { jsdelivr, save } from '../utils.js'
 
 export default {
   props: {
-    sourceURL: String,
+    source: String,
     filename: String,
   },
   methods: {
-    async patch(e) {
-      const sourceURL = jsdelivr(this.sourceURL)
-      const patch = this.$el.querySelector('.language-diff').textContent
-      if (!this.source) this.source = await ky(sourceURL).text()
-      const patched = applyPatch(this.source, patch)
+    async usePatch() {
+      const raw = await ky(jsdelivr(this.source)).text()
+      const patched = applyPatch(raw, this.patch)
+      if (!patched) return alert('应用补丁失败！请报告此问题。')
       save(patched, this.filename)
     },
+  },
+  mounted() {
+    this.patch = this.$el.querySelector('.language-diff').textContent
   },
 }
 </script>
