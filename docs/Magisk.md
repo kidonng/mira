@@ -11,6 +11,8 @@ export default {
   }),
   computed: {
     url() {
+      if (typeof window === 'undefined') return
+
       const url = new URL(location)
       url.pathname = '/api/magisk'
       url.searchParams.set('mirror', this.mirror)
