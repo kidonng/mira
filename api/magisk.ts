@@ -68,7 +68,7 @@ export default async (
         `https://raw.githubusercontent.com/topjohnwu/magisk_files/canary/${manifest[key].note}`
       )
   } else {
-    for (const key of Object.keys(manifest))
+    for (const key in manifest)
       manifest[key].link = mirrors[mirror](manifest[key].link)
 
     for (const key of ['magisk', 'app'])

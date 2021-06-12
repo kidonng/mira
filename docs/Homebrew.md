@@ -11,13 +11,13 @@ export default {
   data: () => ({
     mirrors: {
       ustc: {
-        homepage: USTC,
+        homepage: `${USTC}help/brew.git.html`,
         brew: `${USTC}brew.git`,
         macos: `${USTC}homebrew-core.git`,
         linux: `${USTC}linuxbrew-core.git`,
       },
       tuna: {
-        homepage: TUNA,
+        homepage: `${TUNA}help/homebrew/`,
         brew: `${TUNA_HOMEBREW}brew.git`,
         macos: `${TUNA_HOMEBREW}homebrew-core.git`,
         linux: `${TUNA_HOMEBREW}linuxbrew-core.git`,
@@ -33,19 +33,19 @@ export default {
 ## 使用方法
 
 1. <label>
-   选择系统：
-     <select v-model="os">
-       <option value="macos">macOS</option>
-       <option value="linux">Linux</option>
-     </select>
-   </label>
-2. <label>
    选择镜像：
      <select v-model="mirror">
        <option value="ustc">USTC</option>
        <option value="tuna">TUNA</option>
      </select>
    </label> (<a :href="mirrors[mirror].homepage">{{ mirrors[mirror].homepage }}</a>)
+2. <label>
+   选择系统：
+     <select v-model="os">
+       <option value="macos">macOS</option>
+       <option value="linux">Linux</option>
+     </select>
+   </label>
 3. 执行以下代码（点击复制）：
 
    <pre @click="e => copy(e, 'pre')">
