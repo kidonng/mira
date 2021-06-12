@@ -1,6 +1,8 @@
 # [Magisk](https://github.com/topjohnwu/Magisk)
 
 <script>
+import { copy } from './.vuepress/utils'
+
 export default {
   data: () => ({
     mirrors: {
@@ -20,11 +22,7 @@ export default {
       return url.toString()
     }
   },
-  methods: {
-    copy() {
-      navigator.clipboard.writeText(this.url).then(() => alert('复制成功！'))
-    }
-  }
+  methods: { copy },
 }
 </script>
 

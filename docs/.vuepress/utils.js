@@ -72,3 +72,10 @@ export function save(content, filename) {
   a.remove()
   URL.revokeObjectURL(url)
 }
+
+export function copy(event, selector) {
+  const target = selector ? event.target.closest(selector) : event.target
+  navigator.clipboard
+    .writeText(target.textContent)
+    .then(() => alert('复制成功！'))
+}
